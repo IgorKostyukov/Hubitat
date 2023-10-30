@@ -11,14 +11,14 @@ definition(
 
 preferences {
   page(name: "mainPage", title: "Settings Page", install: true, uninstall: true) {
+      section ("Devices") {
+          input "deviceList", "capability.*", title: "Devices to use:", multiple: true, required: false, submitOnChange: true
+      } 
 
-  section ("Devices") {
-      input "deviceList", "capability.*", title: "Devices to use:", multiple: true, required: false, submitOnChange: true
-  } 
-
-  section ("Destination") {
-      input name: "ip", title: "FQDN or IP Address", type: "text", defaultValue: "192.168.1.1", required: true
-      input name: "port", title: "API Port", type: "number", defaultValue: 8428, required: true
+      section ("Destination") {
+          input name: "ip", title: "FQDN or IP Address", type: "text", defaultValue: "192.168.1.1", required: true
+          input name: "port", title: "API Port", type: "number", defaultValue: 8428, required: true
+      }
   }
 }
 
