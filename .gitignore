@@ -4,6 +4,7 @@ data/
 .vscode/
 .creds/
 .env
+.vs
 *~
 *.swp
 .pyc
